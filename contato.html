@@ -27,26 +27,29 @@
             <form class="flex"> 
                 <div class="flex">
                     <label for="nome">Nome:</label> <br>
-                    <input type="text" id="nome">
+                    <input type="text" id="nome" onkeyup='validaNome()'>
+                    <div id= 'txtNome'></div>
                     <br>
                     <br>
                 </div>
                 <div class="flex">
                     <label for="email">E-mail:</label> <br>
-                    <input type="email" id="email">
+                    <input type="email" id="email" onkeyup='validaEmail()'>
+                    <div id= 'txtEmail'></div>
                 <br>
                 <br>
                 </div>
                 <div class="flex">
                     <label for="assunto">Assunto:</label> <br>
                     <textarea name="assunto" id="assunto" 
-                    cols="60" rows="5">
+                    cols="60" rows="5" onkeyup='validaAssunto()'>
                 </textarea>
+                <div id= 'txtAssunto'></div>
                  <br>
                  <br>
                 </div>
                 <div class="flex">
-                    <button>Enviar</button>
+                    <button onclick='enviar()'>Enviar</button>
                 </div>
             </form>
         </div>
@@ -60,7 +63,10 @@
     height="250" 
     style="border:0;" 
     allowfullscreen="" 
-    loading="lazy">
+    loading="lazy"
+    onmousemove = "mapaZoom()"
+    onmouseout="mapaNormal()"
+    id= 'mapa'>
     </iframe>
         </div>
     </div>
@@ -76,5 +82,6 @@
     <p class="center"> Todos os direitos reservados: Daniel Mendes &copy
     </p>
 </footer>
+<script src="./assets/JS/script.js"></script>
 </body>
 </html>
